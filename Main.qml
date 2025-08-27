@@ -85,6 +85,7 @@ Window {
         text: "Run at startup"
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 10
+
     }
 
     property int counter: 0
@@ -94,6 +95,9 @@ Window {
         anchors.topMargin: 10
         anchors.rightMargin: 10
         text : "Settings"
+        ToolTip.visible: hovered
+        ToolTip.text: "This is a helpful tooltip."
+
         onClicked: {
             counter += 1
             console.log("Counter value:", counter)
